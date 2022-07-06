@@ -1,5 +1,6 @@
 package com.felipeivanaga.gof;
 
+import com.felipeivanaga.gof.facade.Facade;
 import com.felipeivanaga.gof.singleton.EagerSingleton;
 import com.felipeivanaga.gof.singleton.LazyHolderSingleton;
 import com.felipeivanaga.gof.singleton.LazySingleton;
@@ -36,5 +37,9 @@ public class Test {
         robot.move();
         robot.setBehavior(aggressive);
         robot.move();
+
+        System.out.println("\n###Facade###");
+        Facade facace = new Facade();
+        facace.migrateClient("Tyler", "82100-150");
     }
 }
